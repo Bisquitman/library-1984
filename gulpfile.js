@@ -18,7 +18,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import gcmq from 'gulp-group-css-media-queries';
-import {stream as critical} from 'critical';
+import { stream as critical } from 'critical';
 
 const scss2css = gulpSass(sass);
 
