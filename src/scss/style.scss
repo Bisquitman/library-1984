@@ -1,9 +1,12 @@
-@import 'variables';
+@import "normalize";
+@include normalize();
+@import "variables";
+@import "fonts";
+@import "default";
 
-@include font('Roboto', 900);
-@include font('Roboto', 700);
-@include font('Roboto', 400);
+@import "./blocks/header";
+@import "./blocks/library";
+@import "./blocks/card";
+@import "./blocks/book";
 
-body {
-  font-family: Roboto, sans-serif;
-}
+@import "./blocks/footer";
