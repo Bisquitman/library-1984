@@ -24,7 +24,7 @@
 <section class="library">
   <header class="header library__header">
     <div class="container header__container">
-      <img class="header__logo" src="./img/logo.svg" alt="logo image big brother" width="61" height="40">
+      <img class="header__logo" src="./img/logo.svg" alt="logo image big brother">
 
       <button class="header__btn-add">Добавить книгу</button>
 
@@ -39,9 +39,9 @@
 
     <div class="library__fields fields">
       <div class="fields__block">
-        <button class="fields__btn fields__btn_sort" aria-label="Сортировка">
+        <button class="fields__button fields__btn_sort" aria-label="Сортировка">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <path d="M3 18H9V16H3V18ZM3 6V8H21V6H3ZM3 13H15V11H3V13Z" fill="white"/>
+            <path d="M3 18H9V16H3V18ZM3 6V8H21V6H3ZM3 13H15V11H3V13Z" fill="currentColor"/>
           </svg>
           <span class="fields__text">По рейгингу</span>
         </button>
@@ -56,17 +56,17 @@
         </ul>
       </div>
 
-      <div class="library__fields fields">
-        <button class="fields__btn fields__btn_filter" aria-label="Фильтр">
+      <div class="fields__block">
+        <button class="fields__button fields__btn_filter" aria-label="Фильтр">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M4.24999 5.61C6.26999 8.2 9.99999 13 9.99999 13V19C9.99999 19.55 10.45 20 11 20H13C13.55 20 14 19.55 14 19V13C14 13 17.72 8.2 19.74 5.61C20.25 4.95 19.78 4 18.95 4H5.03999C4.20999 4 3.73999 4.95 4.24999 5.61Z"
-              fill="white"/>
+              fill="currentColor"/>
           </svg>
           <span class="fields__text">Фильтр</span>
         </button>
 
-        <ul class="fields__list fields__list_sort">
+        <ul class="fields__list fields__list_filter">
           <li class="fields__item">
             <button class="fields__btn">хочу прочитать</button>
           </li>
@@ -144,14 +144,74 @@
           </article>
         </a>
       </li>
+
+      <li class="library__item">
+        <a href="/book" data-navigo>
+          <article class="card">
+            <div class="card__wrapper">
+              <img class="card__image" src="./img/1984.jpg" alt="Фото обложки книги">
+
+              <p class="card__label">хочу прочитать</p>
+            </div>
+
+            <div class="card__content">
+              <h3 class="card__title">1984</h3>
+
+              <p class="card__author">Джордж Оруэлл</p>
+
+              <p class="card__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве
+                правды и является...</p>
+
+              <div class="card__rating">
+                <img src="./img/star.svg" alt="Рейтинг 4 из 5" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+                <img src="./img/star-o.svg" alt="" class="card__rating-star">
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+
+      <li class="library__item">
+        <a href="/book" data-navigo>
+          <article class="card">
+            <div class="card__wrapper">
+              <img src="./img/no-image.jpg" alt="Нет изображения" class="card__image">
+
+              <p class="card__label">хочу прочитать</p>
+            </div>
+
+            <div class="card__content">
+              <h3 class="card__title">Гарри Поттер и Философский камень</h3>
+
+              <p class="card__author">Джоан Роулинг</p>
+
+              <p class="card__description">Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж.
+                К. Роулинг. В нём...</p>
+
+              <div class="card__rating">
+                <img src="./img/star.svg" alt="Рейтинг 5 из 5" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+                <img src="./img/star.svg" alt="" class="card__rating-star">
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+
     </ul>
   </div>
 
-  <footer class="footer">
+  <footer class="footer library__footer">
     <button class="footer__btn library__add-btn" aria-label="Добавить книгу">
       <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <rect x="12.7767" y="0.216667" width="0.433333" height="25.5667" stroke="currentColor" stroke-width="0.433333"/>
-        <rect x="0.216667" y="13.2233" width="0.433333" height="25.5667" transform="rotate(-90 0.216667 13.2233)" stroke="currentColor" stroke-width="0.433333"/>
+        <rect x="0.216667" y="13.2233" width="0.433333" height="25.5667" transform="rotate(-90 0.216667 13.2233)"
+              stroke="currentColor" stroke-width="0.433333"/>
       </svg>
     </button>
   </footer>
@@ -170,7 +230,7 @@
     <div class="book__wrapper">
       <img class="book__image" src="./img/1984.jpg" alt="Обложка 1984">
 
-      <button class="book__label book__btn">Хочу прочитать</button>
+      <button class="book__label book__label_img book__btn">Хочу прочитать</button>
     </div>
 
     <div class="book__content">
@@ -188,11 +248,18 @@
 
       <p class="book__subtitle">Описание</p>
 
-      <p class="book__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве правды и является членом внешней партии. Он не разделяет партийные лозунги и идеологию и в глубине души сильно сомневается в партии, окружающей действительности и вообще во всём том, в чём только можно сомневаться. Чтобы «выпустить пар» и не совершить какой-нибудь безрассудный поступок, ведёт дневник, в котором старается излагать все свои сомнения. На людях же притворяется приверженцем партийных идей. Однако опасается, что девушка Джулия, работающая в том же министерстве, шпионит за ним и хочет разоблачить его. В то же время полагает, что высокопоставленный сотрудник их министерства, член внутренней партии некий О’Брайен также не разделяет мнения партии и является подпольным революционером.</p>
+      <p class="book__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве правды и
+        является членом внешней партии. Он не разделяет партийные лозунги и идеологию и в глубине души сильно
+        сомневается в партии, окружающей действительности и вообще во всём том, в чём только можно сомневаться. Чтобы
+        «выпустить пар» и не совершить какой-нибудь безрассудный поступок, ведёт дневник, в котором старается излагать
+        все свои сомнения. На людях же притворяется приверженцем партийных идей. Однако опасается, что девушка Джулия,
+        работающая в том же министерстве, шпионит за ним и хочет разоблачить его. В то же время полагает, что
+        высокопоставленный сотрудник их министерства, член внутренней партии некий О’Брайен также не разделяет мнения
+        партии и является подпольным революционером.</p>
     </div>
   </div>
 
-  <footer class="footer">
+  <footer class="footer book__footer">
     <button class="footer__btn book__label">хочу прочитать</button>
   </footer>
 </section>
@@ -289,11 +356,26 @@
         </fieldset>
       </fieldset>
 
-      <div class="footer">
+      <div class="footer add__footer">
         <button type="button" class="footer__btn add__btn">Далее</button>
       </div>
     </form>
   </div>
 </section>
+
+<div class="search">
+  <div class="container">
+    <form class="search__form">
+      <label><input class="search__input" type="search"></label>
+      <button class="search__button">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+            fill="currentColor"/>
+        </svg>
+      </button>
+    </form>
+  </div>
+</div>
 </body>
 </html>
