@@ -41,7 +41,7 @@ const path = {
     js: 'src/js/index.js',
     img: 'src/img/**/*.{jpg,jpeg,gif,svg,png}',
     imgF: 'src/img/**/*.{jpg,jpeg,png}',
-    assets: ['src/assets/**/*.*']
+    assets: ['src/assets/**/*.*','src/favicon.ico']
   },
   dist: {
     base: 'dist/',
@@ -49,7 +49,7 @@ const path = {
     css: 'dist/css/',
     js: 'dist/js/',
     img: 'dist/img/',
-    assets: ['dist/assets/']
+    // assets: ['dist/assets/']
   },
   watch: {
     html: 'src/*.html',

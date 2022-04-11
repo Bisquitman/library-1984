@@ -1,4 +1,5 @@
 @import "normalize";
+
 @include normalize();
 @import "variables";
 @import "fonts";
@@ -6,7 +7,10 @@
 
 @import "./blocks/header";
 @import "./blocks/library";
+@import "./blocks/fields";
 @import "./blocks/card";
 @import "./blocks/book";
+
+@import "./blocks/search";
 
 @import "./blocks/footer";

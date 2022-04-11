@@ -1,51 +1,69 @@
 .book {
+  &__header {
+    margin-bottom: 16px;
+  }
+
   &__container {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    @media (min-width: 768px) {
+
+    @include tablet {
       gap: 30px;
     }
-    @media (min-width: 1024px) {
+    @include laptop {
       flex-direction: row;
       gap: 50px;
     }
   }
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
+    max-width: 168px;
+    margin: 0 auto;
+
+    @include tablet {
+      max-width: 300px;
+    }
+
+    @include laptop {
+      max-width: 250px;
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      align-items: center;
+      gap: 20px;
+    }
   }
 
   &__image {
-    max-width: 168px;
     border-radius: 6px;
-    @media (min-width: 768px) {
-      max-width: 300px;
-    }
-    @media (min-width: 1024px) {
-      max-width: 250px;
-    }
   }
 
   &__label {
-    width: 320px;
+
+    &_img {
+      display: none;
+      @include laptop {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+
+    width: 100%;
+    max-width: 320px;
     padding: 18px;
     border-radius: 30px;
-    @media (min-width: 1024px) {
-      width: 100%;
-    }
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 100%;
+    text-align: center;
+    color: $dark;
+    background-color: $light;
   }
 
-  &__btn {
-    display: none;
-    @media (min-width: 1024px) {
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
+  &__content {
+    color: $light;
   }
 
   &__title {
@@ -53,7 +71,7 @@
     font-size: 26px;
     line-height: 1.23;
     margin-bottom: 4px;
-    @media (min-width: 1024px) {
+    @include laptop {
       font-size: 40px;
     }
   }
@@ -63,7 +81,7 @@
     line-height: 120%;
     color: $secondary;
     margin-bottom: 15px;
-    @media (min-width: 1024px) {
+    @include laptop {
       font-size: 18px;
     }
   }
@@ -88,17 +106,22 @@
     font-size: 12px;
     line-height: 130%;
     margin-bottom: 4px;
-    @media (min-width: 1024px) {
+    @include laptop {
       font-size: 14px;
     }
   }
 
   &__description {
-    font-weight: 400;
     font-size: 12px;
     line-height: 130%;
-    @media (min-width: 1024px) {
+    @include laptop {
       font-size: 14px;
+    }
+  }
+
+  &__footer {
+    @include laptop {
+      display: none;
     }
   }
 }

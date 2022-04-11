@@ -1,9 +1,23 @@
 .library {
   &__header {
+    position: relative;
     margin-bottom: 15px;
-  }
 
-  &__titles {
+    &:before {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 174px;
+      height: 174px;
+      top: -55px;
+      left: -46px;
+      background-color: #FF0000;
+      filter: blur(150px);
+      z-index: -1;
+      @include tablet {
+        content: none;
+      }
+    }
   }
 
   &__title {
@@ -24,15 +38,13 @@
     display: flex;
     flex-wrap: wrap;
     gap: 15px 26px;
+    max-width: 780px;
   }
 
   &__list-container {
     @media (max-width: 375px) {
       padding: 0 12px;
     }
-  }
-
-  &__item {
   }
 
   &__add-btn {
@@ -45,5 +57,10 @@
     background-color: $primary;
     color: $light;
   }
-}
 
+  &__footer {
+    @include laptop {
+      display: none;
+    }
+  }
+}
