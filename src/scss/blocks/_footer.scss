@@ -17,5 +17,14 @@
     justify-content: flex-end;
     padding: 20px;
     background-color: transparent;
+
+
+  }
+}
+.book__footer {
+  @media (max-height: 500px) {
+    width: 100%;
+    justify-content: center;
+    background-color: $dark;
   }
 }

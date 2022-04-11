@@ -10,6 +10,18 @@
 
   &_active {
     transform: translateY($top * 2 + $height);
+
+    @include tablet {
+      transform: translateY($top * 2 + $height + 20px);
+    }
+
+    @include laptop {
+      transform: translateY($top * 2 + $height + 30px);
+    }
+
+    @include desktop {
+      transform: translateY($top * 2 + $height + 40px);
+    }
   }
 
   &__form {

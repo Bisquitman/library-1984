@@ -14,6 +14,7 @@
       background-color: #FF0000;
       filter: blur(150px);
       z-index: -1;
+
       @include tablet {
         content: none;
       }

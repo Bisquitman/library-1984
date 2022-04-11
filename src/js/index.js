@@ -16,6 +16,7 @@ const closeAllPages = () => {
   library.classList.add('hide');
   book.classList.add('hide');
   add.classList.add('hide');
+  search.classList.remove('search_active');
 };
 
 router.on({
