@@ -7,7 +7,7 @@
   &__block {
     position: relative;
     z-index: 3;
-    
+
     @include laptop {
       min-width: 142px;
     }
