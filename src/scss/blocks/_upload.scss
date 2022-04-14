@@ -16,7 +16,13 @@
     height: 290px;
     background-image: url("../img/upload.jpg");
     border-radius: 6px;
-    //background-size: cover;
+    background-size: cover;
     cursor: pointer;
+    &_active{
+      background-image: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
   }
 }
