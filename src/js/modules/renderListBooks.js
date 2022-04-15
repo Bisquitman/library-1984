@@ -1,6 +1,9 @@
 import {getBooks, getLabels, API_URI} from "./serviceBook.js";
 
 const libraryList = document.querySelector('.library__list');
+const libraryCount = document.querySelector('.library__count');
+
+const declOfNum = (n, titles) => n + ' ' + titles[n % 10 === 1 && n % 100 !== 11 ? 0 : n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 1 : 2];
 
 const getStars = (rating) => {
   const stars = [];
@@ -18,6 +21,7 @@ const getStars = (rating) => {
 
 export const renderListBooks = async () => {
   const [books, labels] = await Promise.all([getBooks(), getLabels()]);
+  libraryCount.textContent = declOfNum(books.length, ['книга', 'книги', 'книг']);
 
   libraryList.textContent = '';
 
