@@ -16,12 +16,6 @@ const getStars = (rating) => {
   return stars;
 };
 
-/*
-export const renderBook = async () => {
-  const [books, labels] = await Promise.all([getBooks(), getLabels()]);
-}
- */
-
 export const renderBook = async (id) => {
   bookContainer.textContent = '';
 
