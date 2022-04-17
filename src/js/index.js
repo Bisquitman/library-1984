@@ -3,7 +3,7 @@ import './modules/search.js';
 import changeFieldset from './modules/changeFieldset.js';
 import {controlField} from './modules/controlField.js';
 import './modules/upload.js';
-// import {renderBook} from "./modules/renderBook.js";
+import {renderBook} from "./modules/renderBook.js";
 
 const fieldsBtnSort = document.querySelector('.fields__btn_sort');
 const fieldsListSort = document.querySelector('.fields__list_sort');
