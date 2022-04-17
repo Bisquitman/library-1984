@@ -2,7 +2,7 @@ import Navigo from 'navigo';
 import {renderListBooks} from './renderListBooks.js';
 import {renderBook} from "./renderBook.js";
 
-export const router = new Navigo(location.pathname, {
+export const router = new Navigo('/', {
   hash: true,
 });
 
