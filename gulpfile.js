@@ -18,7 +18,7 @@ import sourcemaps from 'gulp-sourcemaps';
 import autoprefixer from 'gulp-autoprefixer';
 import cleanCSS from 'gulp-clean-css';
 import gcmq from 'gulp-group-css-media-queries';
-import { stream as critical } from 'critical';
+import {stream as critical} from 'critical';
 
 const scss2css = gulpSass(sass);
 
@@ -41,15 +41,15 @@ const path = {
     js: 'src/js/index.js',
     img: 'src/img/**/*.{jpg,jpeg,gif,svg,png}',
     imgF: 'src/img/**/*.{jpg,jpeg,png}',
-    assets: ['src/assets/**/*.*','src/favicon.ico']
+    assets: ['src/assets/**/*.*', 'src/favicon.ico']
   },
   dist: {
     base: 'dist/',
-    html: 'dist/',
+    html: 'dist/*.html',
     css: 'dist/css/',
     js: 'dist/js/',
     img: 'dist/img/',
-    // assets: ['dist/assets/']
+    cssIndex: 'dist/css/style.min.css',
   },
   watch: {
     html: 'src/*.html',
@@ -71,7 +71,7 @@ export const html = () => gulp
     removeComments: true,
     collapseWhitespace: true
   })))
-  .pipe(gulp.dest(path.dist.html))
+  .pipe(gulp.dest(path.dist.base))
   .pipe(browserSync.stream());
 
 export const scss = () => gulp
@@ -98,6 +98,16 @@ export const scss = () => gulp
   .pipe(gulpIf(dev, sourcemaps.write()))
   .pipe(gulp.dest(path.dist.css))
   .pipe(browserSync.stream());
+
+export const critCSS = () => gulp
+  .src(path.dist.html)
+  .pipe(critical({
+    base: path.dist.base,
+    inline: true,
+    css: [path.dist.cssIndex],
+  }))
+  .on('error', (err) => console.error(err.message))
+  .pipe(gulp.dest(path.dist.base));
 
 const configWebpack = {
   mode: dev ? 'development' : 'production',
@@ -236,6 +246,6 @@ const develop = (ready) => {
 
 export const base = gulp.parallel(html, scss, js, image, webp, avif, copy)
 
-export const build = gulp.series(clear, base);
+export const build = gulp.series(clear, base, critCSS);
 
 export default gulp.series(develop, base, server);

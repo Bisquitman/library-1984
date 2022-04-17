@@ -2,7 +2,7 @@ import Navigo from 'navigo';
 import {renderListBooks} from './renderListBooks.js';
 import {renderBook} from "./renderBook.js";
 
-export const router = new Navigo('/', {
+export const router = new Navigo(location.pathname, {
   hash: true,
 });
 
@@ -31,11 +31,7 @@ export const initRouter = () => {
       closeAllPages();
       book.classList.remove('hide');
       document.body.classList.add('body_gradient');
-      renderBook(id); // Тут вызвать функцию, которая отрисует книгу с этим id
-      /*
-      Создать файл renderBook.js
-      В нём сделать функцию renderBook(id), как renderListBooks, только в getBooks() передать id
-      */
+      renderBook(id);
     },
     'add': () => {
       closeAllPages();
@@ -52,7 +48,6 @@ export const initRouter = () => {
   });
 
   backBtn.addEventListener('click', () => {
-    // e.preventDefault();
     router.navigate('/');
   });
 };

@@ -1,5 +1,7 @@
 import {router} from './router.js';
 import {clearPreview} from './upload.js';
+import {addBook} from "./serviceBook.js";
+import toBase64 from "./toBase64.js";
 
 const form = document.querySelector('.add__form');
 const fieldsets = document.querySelectorAll('.add__fieldset');
@@ -7,13 +9,16 @@ const addBtn = document.querySelector('.add__btn');
 const btnBack = document.querySelector('.add__btn-back');
 let count = 0;
 
-const sendBook = () => {
-  const data = true;  // данные с сервера
-  if (data) {
+const sendBook = async () => {
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData);
+  data.image = await toBase64(data.image);
+
+  const book = await addBook(data);
+  if (book) {
     form.reset();
     clearPreview();
     router.navigate('/');
-    count = 0;
     addBtn.textContent = 'Далее';
   }
 };

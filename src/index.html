@@ -48,10 +48,10 @@
 
         <ul class="fields__list fields__list_sort">
           <li class="fields__item">
-            <button class="fields__btn">от большего</button>
+            <button class="fields__btn" data-sort="down">от большего</button>
           </li>
           <li class="fields__item">
-            <button class="fields__btn">от меньшего</button>
+            <button class="fields__btn" data-sort="up">от меньшего</button>
           </li>
         </ul>
       </div>
@@ -67,7 +67,7 @@
         </button>
 
         <ul class="fields__list fields__list_filter">
-          <li class="fields__item">
+          <!--<li class="fields__item">
             <button class="fields__btn">хочу прочитать</button>
           </li>
           <li class="fields__item">
@@ -78,133 +78,133 @@
           </li>
           <li class="fields__item">
             <button class="fields__btn">не дочитал</button>
-          </li>
+          </li>-->
         </ul>
       </div>
     </div>
   </div>
 
-  <div class="container library__list-container">
+  <section class="container library__list-container">
     <h2 class="visually-hidden">Список книг</h2>
     <ul class="library__list">
-      <li class="library__item">
-        <a href="/book" data-navigo>
-          <article class="card">
-            <div class="card__wrapper">
-              <img class="card__image" src="./img/1984.jpg" alt="Фото обложки книги">
+      <!--<li class="library__item">
+       <a href="/book" data-navigo>
+         <article class="card">
+           <div class="card__wrapper">
+             <img class="card__image" src="./img/1984.jpg" alt="Фото обложки книги">
 
-              <p class="card__label">хочу прочитать</p>
-            </div>
+             <p class="card__label">хочу прочитать</p>
+           </div>
 
-            <div class="card__content">
-              <h3 class="card__title">1984</h3>
+           <div class="card__content">
+             <h3 class="card__title">1984</h3>
 
-              <p class="card__author">Джордж Оруэлл</p>
+             <p class="card__author">Джордж Оруэлл</p>
 
-              <p class="card__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве
-                правды и является...</p>
+             <p class="card__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве
+               правды и является...</p>
 
-              <div class="card__rating">
-                <img src="./img/star.svg" alt="Рейтинг 4 из 5" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star-o.svg" alt="" class="card__rating-star">
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
+             <div class="card__rating">
+               <img src="./img/star.svg" alt="Рейтинг 4 из 5" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star-o.svg" alt="" class="card__rating-star">
+             </div>
+           </div>
+         </article>
+       </a>
+     </li>
 
-      <li class="library__item">
-        <a href="/book" data-navigo>
-          <article class="card">
-            <div class="card__wrapper">
-              <img src="./img/no-image.jpg" alt="Нет изображения" class="card__image">
+     <li class="library__item">
+       <a href="/book" data-navigo>
+         <article class="card">
+           <div class="card__wrapper">
+             <img src="./img/no-image.jpg" alt="Нет изображения" class="card__image">
 
-              <p class="card__label">хочу прочитать</p>
-            </div>
+             <p class="card__label">хочу прочитать</p>
+           </div>
 
-            <div class="card__content">
-              <h3 class="card__title">Гарри Поттер и Философский камень</h3>
+           <div class="card__content">
+             <h3 class="card__title">Гарри Поттер и Философский камень</h3>
 
-              <p class="card__author">Джоан Роулинг</p>
+             <p class="card__author">Джоан Роулинг</p>
 
-              <p class="card__description">Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж.
-                К. Роулинг. В нём...</p>
+             <p class="card__description">Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж.
+               К. Роулинг. В нём...</p>
 
-              <div class="card__rating">
-                <img src="./img/star.svg" alt="Рейтинг 5 из 5" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
+             <div class="card__rating">
+               <img src="./img/star.svg" alt="Рейтинг 5 из 5" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+             </div>
+           </div>
+         </article>
+       </a>
+     </li>
 
-      <li class="library__item">
-        <a href="/book" data-navigo>
-          <article class="card">
-            <div class="card__wrapper">
-              <img class="card__image" src="./img/1984.jpg" alt="Фото обложки книги">
+     <li class="library__item">
+       <a href="/book" data-navigo>
+         <article class="card">
+           <div class="card__wrapper">
+             <img class="card__image" src="./img/1984.jpg" alt="Фото обложки книги">
 
-              <p class="card__label">хочу прочитать</p>
-            </div>
+             <p class="card__label">хочу прочитать</p>
+           </div>
 
-            <div class="card__content">
-              <h3 class="card__title">1984</h3>
+           <div class="card__content">
+             <h3 class="card__title">1984</h3>
 
-              <p class="card__author">Джордж Оруэлл</p>
+             <p class="card__author">Джордж Оруэлл</p>
 
-              <p class="card__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве
-                правды и является...</p>
+             <p class="card__description">Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве
+               правды и является...</p>
 
-              <div class="card__rating">
-                <img src="./img/star.svg" alt="Рейтинг 4 из 5" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star-o.svg" alt="" class="card__rating-star">
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
+             <div class="card__rating">
+               <img src="./img/star.svg" alt="Рейтинг 4 из 5" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star-o.svg" alt="" class="card__rating-star">
+             </div>
+           </div>
+         </article>
+       </a>
+     </li>
 
-      <li class="library__item">
-        <a href="/book" data-navigo>
-          <article class="card">
-            <div class="card__wrapper">
-              <img src="./img/no-image.jpg" alt="Нет изображения" class="card__image">
+     <li class="library__item">
+       <a href="/book" data-navigo>
+         <article class="card">
+           <div class="card__wrapper">
+             <img src="./img/no-image.jpg" alt="Нет изображения" class="card__image">
 
-              <p class="card__label">хочу прочитать</p>
-            </div>
+             <p class="card__label">хочу прочитать</p>
+           </div>
 
-            <div class="card__content">
-              <h3 class="card__title">Гарри Поттер и Философский камень</h3>
+           <div class="card__content">
+             <h3 class="card__title">Гарри Поттер и Философский камень</h3>
 
-              <p class="card__author">Джоан Роулинг</p>
+             <p class="card__author">Джоан Роулинг</p>
 
-              <p class="card__description">Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж.
-                К. Роулинг. В нём...</p>
+             <p class="card__description">Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж.
+               К. Роулинг. В нём...</p>
 
-              <div class="card__rating">
-                <img src="./img/star.svg" alt="Рейтинг 5 из 5" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-                <img src="./img/star.svg" alt="" class="card__rating-star">
-              </div>
-            </div>
-          </article>
-        </a>
-      </li>
-
+             <div class="card__rating">
+               <img src="./img/star.svg" alt="Рейтинг 5 из 5" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+               <img src="./img/star.svg" alt="" class="card__rating-star">
+             </div>
+           </div>
+         </article>
+       </a>
+     </li>
+-->
     </ul>
-  </div>
+  </section>
 
   <footer class="footer library__footer">
     <button class="footer__btn library__add-btn" aria-label="Добавить книгу">
@@ -227,7 +227,7 @@
   </header>
 
   <div class="container book__container">
-    <div class="book__wrapper">
+    <!--<div class="book__wrapper">
       <img class="book__image" src="./img/1984.jpg" alt="Обложка 1984">
 
       <button class="book__label book__label_img book__btn">Хочу прочитать</button>
@@ -256,7 +256,7 @@
         работающая в том же министерстве, шпионит за ним и хочет разоблачить его. В то же время полагает, что
         высокопоставленный сотрудник их министерства, член внутренней партии некий О’Брайен также не разделяет мнения
         партии и является подпольным революционером.</p>
-    </div>
+    </div>-->
   </div>
 
   <footer class="footer book__footer">
@@ -301,7 +301,7 @@
 
           <label class="upload__label">
             <img class="upload__preview" src="./img/no-image.jpg" alt="Превью изображения">
-            <input type="file" name="file" class="upload__file" accept="image/*">
+            <input type="file" name="image" class="upload__file" accept="image/*">
           </label>
         </div>
       </fieldset>
@@ -366,7 +366,7 @@
 <div class="search">
   <div class="container">
     <form class="search__form">
-      <label><input class="search__input" type="search"></label>
+      <label><input class="search__input" type="search" name="input"></label>
       <button class="search__button">
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

@@ -67,9 +67,10 @@
   }
 
   &__btn {
-    width: 100%;
-    height: 50px;
     max-width: 320px;
+    width: 100%;
+    //height: 50px;
+    padding: 18px 2*18px;
     background-color: $primary;
     border-radius: 8px;
     font-weight: 500;
