@@ -51,7 +51,7 @@ export const delBooks = async (id) => {
   throw new Error(response.statusText);
 };
 
-export const editBooks = async (id, data) => {
+export const editBook = async (id, data) => {
   const response = await fetch(`${API_URI}/api/books/${id}`, {
     method: 'PATCH',
     body: JSON.stringify(data),
